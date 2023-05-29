@@ -730,11 +730,11 @@ IntegrateSpaData <- function(PRECASTObj, species="Human", custom_housekeep=NULL,
   houseKeep <- switch (lower_species,
     human = {
       # data(Human_HK_genes)
-       intersect(toupper(genelist), PRECAST::Human_HK_genes$Gene)
+       intersect(toupper(genelist), PRECAST::Human_HK_genes$Ensembl)
       },
     mouse={
       #data(Mouse_HK_genes)
-      intersect(firstup(genelist), PRECAST::Mouse_HK_genes$Gene)
+      intersect(firstup(genelist), PRECAST::Mouse_HK_genes$Ensembl)
     },
     unknown={
       character()
