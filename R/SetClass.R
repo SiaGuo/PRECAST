@@ -675,7 +675,7 @@ get_correct_mean_exp <- function(XList,  hVList, covariateList=NULL){
   
 }
 
-IntegrateSpaData_ensg <- function(PRECASTObj, species="Human", hk_genes, custom_housekeep=NULL, covariates_use=NULL){
+IntegrateSpaData <- function(PRECASTObj, species="Human", hk_genes, custom_housekeep=NULL, covariates_use=NULL){
   # suppressMessages(require(Matrix))
   # suppressMessages(require(Seurat))
   
