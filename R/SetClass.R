@@ -675,7 +675,7 @@ get_correct_mean_exp <- function(XList,  hVList, covariateList=NULL){
   
 }
 
-IntegrateSpaData <- function(PRECASTObj, species="Human", custom_housekeep=NULL, covariates_use=NULL){
+IntegrateSpaData_ensg <- function(PRECASTObj, species="Human", hk_genes, custom_housekeep=NULL, covariates_use=NULL){
   # suppressMessages(require(Matrix))
   # suppressMessages(require(Seurat))
   
@@ -730,11 +730,11 @@ IntegrateSpaData <- function(PRECASTObj, species="Human", custom_housekeep=NULL,
   houseKeep <- switch (lower_species,
     human = {
       # data(Human_HK_genes)
-       intersect(toupper(genelist), PRECAST::Human_HK_genes$Ensembl)
+       intersect(toupper(genelist), hk_genes$ENSG)
       },
     mouse={
       #data(Mouse_HK_genes)
-      intersect(firstup(genelist), PRECAST::Mouse_HK_genes$Ensembl)
+      intersect(firstup(genelist), hk_genes$ENSG)
     },
     unknown={
       character()
