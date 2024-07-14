@@ -734,7 +734,7 @@ IntegrateSpaData <- function(PRECASTObj, species="Human", hk_genes, custom_house
       },
     mouse={
       #data(Mouse_HK_genes)
-      intersect(firstup(genelist), hk_genes$ENSG)
+      intersect(firstup(genelist), hk_genes$Gene)
     },
     unknown={
       character()
