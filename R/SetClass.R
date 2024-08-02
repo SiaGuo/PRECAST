@@ -730,7 +730,7 @@ IntegrateSpaData <- function(PRECASTObj, species="Human", hk_genes, custom_house
   houseKeep <- switch (lower_species,
     human = {
       # data(Human_HK_genes)
-       intersect(toupper(genelist), hk_genes$ENSG)
+       intersect(toupper(genelist), hk_genes$Gene)
       },
     mouse={
       #data(Mouse_HK_genes)
